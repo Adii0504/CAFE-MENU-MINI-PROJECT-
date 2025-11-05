@@ -1,0 +1,28 @@
+# mini project of HOTEL MENU 
+menu = { 'Pizza': 70, 
+         'Burger': 50,
+         'pasta': 60,
+         'salad': 50,
+         'soda': 30,}
+
+print("welcome to the PYTHON CAFE ")
+print("menu :\n Pizza -- 70\n Burger -- 50\n pasta -- 60\n salad -- 50\n soda -- 30")
+
+total_order = 0
+
+item = input("Enter the item you want to order : ")
+if item in menu:
+    total_order += menu[item]
+    print(f"{item} is available")
+else:
+    print(f"{item}is not available ")
+item2 = input("you want to continue order yes/no == ")
+if item2 == "yes":
+    item2 = input("Enter the item you want to order :")
+    if item2 in menu:
+        total_order += menu[item2]
+    print(f"{item2} is available")
+else:
+    print(f"{item2}is not available ")
+print("the total amoutn of your order is :", total_order)
+print("thank you for visiting PYTHON CAFE")
